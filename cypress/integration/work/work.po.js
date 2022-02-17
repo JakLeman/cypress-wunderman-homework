@@ -15,6 +15,7 @@ var selectors = {
   },
   dropdowns: {
     workExpertise: ":nth-child(1) > .tab",
+    workExpertiseExpended: ":nth-child(1) > .tab-body",
     workExpertiseActivated: ".tab.link.active",
   },
 };
@@ -47,7 +48,7 @@ class Work {
   }
   chooseRandomCategory() {
     workExpertiseArray.forEach(function (value) {
-      cy.get(selectors.dropdowns.workExpertise)
+      cy.get(selectors.dropdowns.workExpertiseExpended)
         .scrollIntoView()
         .children()
         .should("contain", value);

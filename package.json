@@ -1,0 +1,9 @@
+{
+  "name": "cypress-homework",
+  "author": "Jakub Lemańczyk",
+  "version": "1.0.0",
+  "description": "WundermanThompson Homework",
+  "devDependencies": {
+    "cypress": "9.5.0"
+  }
+}
