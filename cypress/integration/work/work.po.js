@@ -6,6 +6,7 @@ var selectors = {
     contactLabel: "nav > [href*='/contact-us']",
     officesLabel: "nav > [href*='/offices']",
     cookieAccept: "#onetrust-accept-btn-handler",
+    subCategoryItem: ".selected-options",
   },
   objects: {
     wtLogo: ".nav-wrapper > .logo > .wt-logo",
@@ -14,6 +15,7 @@ var selectors = {
   },
   dropdowns: {
     workExpertise: ":nth-child(1) > .tab",
+    workExpertiseActivated: ".tab.link.active",
   },
 };
 
@@ -45,7 +47,7 @@ class Work {
   }
   chooseRandomCategory() {
     workExpertiseArray.forEach(function (value) {
-      cy.get(":nth-child(1) > .tab-body")
+      cy.get(selectors.dropdowns.workExpertise)
         .scrollIntoView()
         .children()
         .should("contain", value);
@@ -54,10 +56,10 @@ class Work {
   validateRandomElement() {
     cy.log(randomWorkExpertise);
     cy.point(randomWorkExpertise).should("be.exist").click();
-    cy.get(".selected-options")
+    cy.get(selectors.labels.subCategoryItem)
       .should("be.visible")
       .and("contain.text", randomWorkExpertise);
-    cy.get(".tab.link.active").click();
+    cy.get(selectors.dropdowns.workExpertiseActivated).click();
   }
 }
 
