@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "es5",
+    "lib": ["es5", "dom"],
+    "baseUrl": "./cypress",
+    "types": ["cypress"],
+    "paths": {
+      "@support/*": ["support/*"]
+    },
+    "moduleResolution": "node"
+  },
+  "include": ["**/*.*"]
+}

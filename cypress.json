@@ -1,0 +1,16 @@
+{
+    "baseUrl": "https://www.wundermanthompson.com/",
+    "integrationFolder": "cypress/integration/",
+    "fixturesFolder": "cypress/fixtures/",
+    "testFiles": "**/*.spec.js",
+    "video": false,
+    "defaultCommandTimeout": 5000,
+    "pageLoadTimeout": 30000,
+    "retries": 0,
+    "screenshotOnRunFailure": true,
+    "viewportWidth": 1920,
+    "viewportHeight": 1080,
+    "watchForFileChanges": false,
+    "trashAssetsBeforeRuns": true,
+    "headless": true
+  }
